@@ -32,7 +32,13 @@ jobs:
     - name: Build with Flet
       run: |
         flet build ipa --build-version 1.0.0 --product Keima --build-version 1.0.0 --project Keima --template https://github.com/KeimaSenpai/flet-build-template.git
-
+    
+    - name: Upload Artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: python-scripts
+        path: .
+    
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1

@@ -96,7 +96,7 @@ class LandingPage(ft.View):
         self.page = page
 
         # Define a var for lock icon
-        self.lock = ft.Icon(name="lock", scale=ft.Scale(4))
+        self.lock = ft.Icon(name="lock", scale=ft.Scale(4), color='#ffffff')
 
         # Define a button to route to profile
         self.button = ft.Container(
